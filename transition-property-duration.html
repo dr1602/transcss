@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transition Property Duration</title>
+    <style>
+        .container {
+            margin-top: 30px;
+            margin-left: 30px;
+            background: lightcoral;
+            width: 420px;
+            height: 120px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .container:hover .box {
+            transform: scale(1.2);
+        }
+
+        .box {
+            background: fuchsia;
+            width: 120px;
+            height: 120px;
+            margin: 0 12px 0 12px;
+        }
+
+        .box1 {
+            background: fuchsia;
+            transition: transform 600ms;
+            border-radius: 12px;
+        }
+
+        .box2 {
+            background: navy;
+            transition: transform 1.8s;
+            border-radius: 12px;
+        }
+
+        .box3 {
+            background: purple;
+            transition: transform 300ms;
+            border-radius: 12px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box box1"></div>
+        <div class="box box2"></div>
+        <div class="box box3"></div>
+    </div>
+</body>
+</html>
