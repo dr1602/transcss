@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transition Timing Function Delay</title>
+</head>
+<style>
+    .container:hover .circle{
+        transform: translateX(420px);
+    }
+
+    .circle {
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        margin: 6px 0 6px 0;
+    }
+
+    .one {
+        background:  #e74c3c;
+        transition: transform 1.2s linear;
+        transition-delay: 0.3s;
+    }
+
+    .two {
+        background:  #8e44ad ;
+        transition: transform 1.5s ease;
+        transition-delay: 0.6s;
+    }
+
+    .three {
+        background: #3498db;
+        transition: transform 1.8s ease-in;
+        transition-delay: 0.9s;
+    }
+
+    .four {
+        background: #1abc9c;
+        transition: transform 2.1s ease-in-out;
+        transition-delay: 1.2s;
+    }
+
+    .five {
+        background: #2ecc71;
+        transition: transform 1.8s ease-out;
+        transition-delay: 0.9s;
+    }
+
+    .six {
+        background: #f1c40f;
+        transition: transform 1.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        transition-delay: 0.6s;
+    }
+
+
+</style>
+<body>
+    <div class="container">
+        <div class="circle one"></div>
+        <div class="circle two"></div>
+        <div class="circle three"></div>
+        <div class="circle four"></div>
+        <div class="circle five"></div>
+        <div class="circle six"></div>
+    </div>
+</body>
+</html>
