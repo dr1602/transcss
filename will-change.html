@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        button {
+            width: 120px;
+            height: 30px;
+            background: orangered;
+        }
+
+        .container {
+            display: grid;
+            grid-column: 1;
+        }
+
+        .better {
+            will-change: transform;
+            transition: transform 600ms;
+            margin-bottom: 6px;
+            border-radius: 12px;
+        }
+
+        .better:hover {
+            /*transform: translate3d(42px, 62px, 135px);*/
+            transform: translateX(12px);
+        }
+
+        .worst {
+            will-change: margin-top;
+            transition: margin 600ms;
+            margin-top: 6px;
+            border-radius: 12px;
+        }
+
+        .worst:hover {
+            margin-left: 12px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <button class="better"></button>
+        <button class="worst"></button>
+    </div>
+</body>
+</html>
