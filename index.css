@@ -78,6 +78,7 @@ a{
     height: 597px;
     display: grid;
     grid-template-rows: 0.5fr 1fr 0.5fr;
+    overflow-x: hidden;
 }
 
 .footer {
