@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <title>UX Problemas de Parpadeo</title>
+</head>
+<style>
+
+    div {
+        border-radius: 50%;
+        width: 100px;
+        height: 100px;
+    }
+
+    .item {
+        background: aqua;
+    }
+
+    .container:hover .item {
+        transform: translateY(60px);
+        /*background: rebeccapurple;*/
+    }
+
+</style>
+<body>
+    <div class='container'>
+        <div class='item'></div>
+    </div>
+</body>
+</html>
