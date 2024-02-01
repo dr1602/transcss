@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <title> UX Tiempo de espera</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Honk&display=swap" rel="stylesheet">
+    <style>
+
+        body {
+            margin: 0;
+            font-family: 'Honk', system-ui;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        a{
+            text-decoration: none;
+            color: white;       
+            font-size: 24px;  
+            letter-spacing: 1px;
+        }
+
+        .nav {
+            display: flex;
+            background: #00BCD5;
+            padding: 12px 0 12px 0;
+            margin: 0;
+        }
+
+        .nav li {
+            margin: 0 12px 0 12px;
+        }
+
+        .nav li ul{
+            background: #AB46BC;
+            display: block;
+            opacity: 0;
+            position: absolute;
+            transition: opacity 8000ms;
+            transition-delay: 100ms;
+            margin-top: 12px;
+            padding-left: 12px;
+            padding-right: 12px;
+        }
+
+        .nav li:hover > ul {
+            opacity: 1;
+            transition: opacity 1200ms;
+            transition-delay: 100ms;
+        }
+
+        .nav li ul li{
+            position: relative;
+            margin: 6px 0 6px;
+            right: -0px;
+        }
+
+        .submenu {
+            right: -138px;
+        }
+
+    </style>
+</head>
+<body>
+    <ul class="nav">
+        <li>
+            <a href="/"> Perros </a>
+            <ul>
+                <li> <a href=""> Comida </a> </li>
+                <li> <a href=""> Ropa </a> </li>
+                <li> 
+                    <a href=""> Juguetes </a> 
+                    <ul class="submenu">
+                        <li> <a href=""> Pelotas </a> </li>
+                        <li> <a href=""> Peluches </a> </li>
+                        <li> <a href=""> Huesos </a> </li>
+                    </ul>
+                </li>
+                <li> <a href=""> Accesorios </a> </li>
+            </ul>
+        </li>
+        <li> <a href="/"> Gatos </a></li>
+        <li> <a href="/"> Peces </a></li>
+    </ul>
+</body>
+</html>
