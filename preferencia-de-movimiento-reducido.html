@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <title>Backface</title>
+    <style>
+
+    .face.front {
+        background: blueviolet;
+    }
+
+    .card {
+        width: 200px;
+        height: 200px;
+        position: relative;
+    }
+
+    .face {
+        border-radius: 21px;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        backface-visibility: hidden;
+    }
+
+    .face.back {
+        background: orangered;
+    }
+
+    .card:hover .back {
+        opacity: 1;
+    }
+
+    @media (prefers-reduced-motion: no-preference) {    
+        .card {
+            transform-style: preserve-3d;
+            transition: transform 900ms;
+        }
+
+        .card:hover {
+            transform: rotateY(180deg);
+        }
+        
+        .face.back {
+
+            transform: rotateX(180deg);
+        }
+    }
+
+    </style>
+</head>
+<body>
+
+    <div class='card'>
+
+        <div class='face front'></div>
+        <div class='face back'></div>
+
+    </div>
+
+</body>
+</html>
